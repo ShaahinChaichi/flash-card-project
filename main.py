@@ -35,8 +35,8 @@ def flip_card():
 def is_known():
     to_learn.remove(current_card)
     print(len(to_learn))
-    data = pandas.DataFrame(to_learn)
-    data.to_csv("data/words_to_learn.csv", index=False)
+    data_to_learn = pandas.DataFrame(to_learn)
+    data_to_learn.to_csv("data/words_to_learn.csv", index=False)
     next_card()
 
 
@@ -66,6 +66,3 @@ known_button.grid(row=1, column=1)
 next_card()
 
 window.mainloop()
-
-
-
